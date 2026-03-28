@@ -829,7 +829,7 @@ section {
 }
 
 .form-group textarea {
-    resize: vertical;
+    resize: none;
     min-height: 120px;
     max-height: 300px;
     overflow-y: auto;
