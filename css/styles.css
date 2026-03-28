@@ -385,7 +385,7 @@ body {
    Seções Gerais
    =================================== */
 section {
-    padding: 5rem 0;
+    padding: 7rem 0 5rem 0;
 }
 
 .section-header {
@@ -677,7 +677,6 @@ section {
    =================================== */
 .contact-section {
     background: var(--light);
-    padding-top: 7rem;
 }
 
 .contact-wrapper {
@@ -1114,7 +1113,7 @@ section {
     }
     
     section {
-        padding: 3rem 0;
+        padding: 5rem 0 3rem 0;
     }
 }
 
