@@ -181,6 +181,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===================================
+// Contador de Caracteres do Formulário
+// ===================================
+const mensagemTextarea = document.getElementById('mensagem');
+const charCount = document.getElementById('charCount');
+const charCounter = document.querySelector('.char-counter');
+
+if (mensagemTextarea && charCount) {
+    mensagemTextarea.addEventListener('input', function() {
+        const currentLength = this.value.length;
+        const maxLength = this.getAttribute('maxlength');
+        
+        charCount.textContent = currentLength;
+        
+        // Mudar cor conforme se aproxima do limite
+        if (currentLength >= maxLength * 0.9) {
+            charCounter.classList.add('limit');
+            charCounter.classList.remove('warning');
+        } else if (currentLength >= maxLength * 0.7) {
+            charCounter.classList.add('warning');
+            charCounter.classList.remove('limit');
+        } else {
+            charCounter.classList.remove('warning', 'limit');
+        }
+    });
+}
+
+// ===================================
 // Formulário de Contato
 // ===================================
 const contactForm = document.getElementById('contactForm');

@@ -796,6 +796,23 @@ section {
     resize: vertical;
 }
 
+.char-counter {
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-top: 0.25rem;
+}
+
+.char-counter.warning {
+    color: var(--warning);
+}
+
+.char-counter.limit {
+    color: var(--danger);
+    font-weight: 600;
+}
+
 .btn-submit {
     width: 100%;
     background: var(--primary-color);
