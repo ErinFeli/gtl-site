@@ -188,11 +188,20 @@ const charCount = document.getElementById('charCount');
 const charCounter = document.querySelector('.char-counter');
 
 if (mensagemTextarea && charCount) {
+    // Auto-expandir textarea conforme digita
+    function autoResizeTextarea() {
+        this.style.height = 'auto';
+        this.style.height = Math.min(this.scrollHeight, 300) + 'px';
+    }
+    
     mensagemTextarea.addEventListener('input', function() {
         const currentLength = this.value.length;
         const maxLength = this.getAttribute('maxlength');
         
         charCount.textContent = currentLength;
+        
+        // Auto-expandir
+        autoResizeTextarea.call(this);
         
         // Mudar cor conforme se aproxima do limite
         if (currentLength >= maxLength * 0.9) {
@@ -206,6 +215,37 @@ if (mensagemTextarea && charCount) {
         }
     });
 }
+
+// ===================================
+// Copiar Número de Telefone
+// ===================================
+const phoneNumbers = document.querySelectorAll('.phone-number');
+
+phoneNumbers.forEach(phone => {
+    phone.addEventListener('click', function() {
+        const phoneNumber = this.getAttribute('data-phone');
+        
+        // Copiar para clipboard
+        navigator.clipboard.writeText(phoneNumber).then(() => {
+            // Feedback visual
+            this.classList.add('copied');
+            
+            // Mostrar notificação
+            showNotification(`Telefone ${this.textContent} copiado!`, 'success');
+            
+            // Remover classe após 2 segundos
+            setTimeout(() => {
+                this.classList.remove('copied');
+            }, 2000);
+        }).catch(() => {
+            showNotification('Erro ao copiar telefone', 'error');
+        });
+    });
+    
+    // Adicionar cursor pointer visual
+    phone.style.cursor = 'pointer';
+    phone.setAttribute('title', 'Clique para copiar');
+});
 
 // ===================================
 // Formulário de Contato

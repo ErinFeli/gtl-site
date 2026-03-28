@@ -734,6 +734,42 @@ section {
     line-height: 1.6;
 }
 
+.phone-number {
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: var(--transition);
+    display: inline-block;
+    position: relative;
+}
+
+.phone-number:hover {
+    background: var(--light);
+    color: var(--primary-color);
+    transform: translateX(2px);
+}
+
+.phone-number:active {
+    transform: scale(0.98);
+}
+
+.phone-number::after {
+    content: '📋';
+    opacity: 0;
+    margin-left: 0.5rem;
+    transition: var(--transition);
+}
+
+.phone-number:hover::after {
+    opacity: 1;
+}
+
+.phone-number.copied::after {
+    content: '✓';
+    color: var(--success);
+    opacity: 1;
+}
+
 .valores-box {
     background: var(--white);
     padding: 1.5rem;
@@ -794,6 +830,10 @@ section {
 
 .form-group textarea {
     resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+    overflow-y: auto;
+    transition: var(--transition);
 }
 
 .char-counter {
