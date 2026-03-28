@@ -1,0 +1,22 @@
+# IDEs
+.vscode/
+.idea/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Backup
+*.bak
+*.backup
+*~
+
+# Temporary files
+*.tmp
+*.temp
