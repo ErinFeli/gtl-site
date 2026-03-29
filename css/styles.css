@@ -52,12 +52,15 @@ body {
     color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow-x: hidden;
 }
 
 /* ===================================
@@ -444,6 +447,8 @@ section {
     color: var(--gray);
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .about-features {
@@ -486,6 +491,8 @@ section {
     font-size: 0.95rem;
     color: var(--gray);
     margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .about-image {
@@ -685,6 +692,11 @@ section {
     gap: 4rem;
 }
 
+.contact-info {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 .contact-info h2 {
     font-family: var(--font-secondary);
     font-size: 2rem;
@@ -737,6 +749,9 @@ section {
     font-size: 0.95rem;
     color: var(--gray);
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .phone-number {
@@ -793,6 +808,8 @@ section {
     font-size: 0.95rem;
     color: var(--gray);
     line-height: 1.7;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-form {
