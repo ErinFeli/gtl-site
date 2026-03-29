@@ -44,7 +44,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px;
+    scroll-padding-top: 140px;
 }
 
 body {
@@ -79,7 +79,7 @@ body {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 1.25rem 0;
 }
 
 .nav-wrapper {
@@ -103,9 +103,9 @@ body {
 }
 
 .logo img {
-    height: 85px;
+    height: 110px;
     width: auto;
-    max-width: 300px;
+    max-width: 350px;
     object-fit: contain;
     transition: var(--transition);
 }
@@ -116,7 +116,7 @@ body {
 
 /* Ajuste para header com scroll */
 .header.scrolled .logo img {
-    height: 70px;
+    height: 85px;
 }
 
 .nav-menu {
@@ -1015,10 +1015,10 @@ section {
 @media (max-width: 968px) {
     .nav-menu {
         position: fixed;
-        top: 105px;
+        top: 130px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 105px);
+        height: calc(100vh - 130px);
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
@@ -1094,8 +1094,8 @@ section {
     }
     
     .logo img {
-        height: 70px;
-        max-width: 300px;
+        height: 80px;
+        max-width: 320px;
     }
     
     .stat-number {
@@ -1141,7 +1141,7 @@ section {
     
     /* Logo mais compacto em telas pequenas */
     .logo img {
-        height: 60px;
+        height: 70px;
     }
     
     /* Ajustar botão flutuante em telas menores */
