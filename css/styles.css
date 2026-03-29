@@ -564,6 +564,7 @@ section {
 .stats-section {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
     color: var(--white);
+    padding-bottom: 15rem;
 }
 
 .stats-section .section-tag {
@@ -1119,6 +1120,10 @@ section {
     section {
         padding: 5rem 0 3rem 0;
     }
+    
+    .stats-section {
+        padding-bottom: 10rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1137,6 +1142,10 @@ section {
     .services-grid,
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .stats-section {
+        padding-bottom: 8rem;
     }
     
     /* Logo mais compacto em telas pequenas */
