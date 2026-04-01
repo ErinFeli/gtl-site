@@ -71,8 +71,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: #ffffff;
     box-shadow: var(--shadow-md);
     z-index: 1000;
     transition: var(--transition);
@@ -1019,12 +1018,11 @@ section {
 @media (max-width: 968px) {
     .nav-menu {
         position: fixed;
-        top: 90px;
+        top: 0;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 90px);
+        height: 100vh;
         background: #ffffff;
-        backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -1033,6 +1031,7 @@ section {
         box-shadow: var(--shadow-lg);
         z-index: 1050;
         overflow-y: auto;
+        padding-top: 100px;
     }
     
     .nav-menu.active {
